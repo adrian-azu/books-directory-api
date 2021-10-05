@@ -19,6 +19,8 @@ class UsersRequest {
     }
     async register(req, res, next) {
         const { first_name, last_name, email, password } = req.body
+        let message = {}
+        let emptyField = []
         const data = {
             "first_name": first_name,
             "last_name": last_name,
@@ -47,6 +49,8 @@ class UsersRequest {
     async login(req, res, next)
     {
         const {  email, password } = req.body
+        let message = {}
+        let emptyField = []
         const data = {
             "email": email,
             "password": password
